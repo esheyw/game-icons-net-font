@@ -4,7 +4,7 @@ A module for foundryvtt providing a FontAwesome-like glyph font made from the [g
 
 ## Usage
 
-Like with FA, you would use this via `<i>`s with specific css classes, in this case the icon filename with a `ginf-` prefix.
+Like with FA, you would use this via `<i>`s (or any element really) with specific css classes, in this case the icon filename with a `ginf-` prefix. **Note**: There are over 4000 glyphs, and I have done zero correction yet. Ideally none is needed, but if a particular glyph is misaligned or needs padding or something, I'll try and figure out how to do that, so make issues if things look weird.
 
 ## SVGs
 

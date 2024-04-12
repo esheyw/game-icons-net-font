@@ -1,0 +1,20 @@
+{
+  "id": "game-icons-net-font",
+  "title": "game-icons.net Font",
+  "version": "1.0.0",
+  "styles": ["styles/Game-Icons.net.css"],
+  "authors": [
+    {
+      "name": "Emmanuel Wineberg",
+      "email": "esheyw@gmail.com",
+      "url": "https://github.com/esheyw",
+      "discord": "esheyw"
+    }
+  ],
+  "license": "LICENSE",
+  "library": "true",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  }
+}

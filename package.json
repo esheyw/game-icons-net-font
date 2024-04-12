@@ -1,0 +1,19 @@
+{
+  "name": "game-icons-font",
+  "version": "1.0.0",
+  "description": "A FoundryVTT package providing an icon font based on the game-icons.net collection",
+  "main": "index.js",
+  "scripts": {
+    "build": "curl -L https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip > game-icons.net.svg.zip && 7z x game-icons.net.svg.zip -y && node ./build-font.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Emmanuel Wineber<esheyw@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^10.3.12",
+    "svgson": "^5.3.1",
+    "svgtofont": "^4.2.0"
+  }
+}

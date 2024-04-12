@@ -1,7 +1,6 @@
 {
   "id": "game-icons-net-font",
-  "title": "game-icons.net Font",
-  "version": "1.0.0",
+  "title": "game-icons.net Font",  
   "styles": ["styles/Game-Icons.net.css"],
   "authors": [
     {
@@ -15,6 +14,13 @@
   "library": "true",
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
-  }
+    "verified": "11.315"
+  },
+  "version": "1.0.0",
+  "manifest": "updatedByRelease",
+  "url": "updatedByRelease",
+  "download": "updatedByRelease",
+  "readme": "https://github.com/esheyw/game-icon-net-font/blob/main/README.md",
+  "bugs": "https://github.com/esheyw/game-icon-net-font/issues",
+  "changelog": "https://github.com/esheyw/game-icon-net-font/blob/main/CHANGELOG.md"
 }

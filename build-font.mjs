@@ -23,9 +23,11 @@ for (let i = 0; i < icons.length; i++) {
   const newpath = path.resolve(svgDir, filename);
   const svg = svgson.parseSync(fs.readFileSync(icon));
   svg.children = svg.children.reduce((acc, child) => {
-    process.stdout.cursorTo(25);
-    process.stdout.clearLine(1);
-    process.stdout.write(`Processing icon #${i} of ${icons.length}, ${filename}`);
+    if (process.stdout?.cursorTo) {
+      process.stdout.cursorTo(25);
+      process.stdout.clearLine(1);
+      process.stdout.write(`Processing icon #${i} of ${icons.length}, ${filename}`);
+    }
     const entries = Object.entries(child.attributes);
     if (entries.length === 1 && entries[0][0] === "d" && entries[0][1] === "M0 0h512v512H0z") return acc;
     child.attributes.fill = "#000";
@@ -34,9 +36,11 @@ for (let i = 0; i < icons.length; i++) {
   }, []);
   fs.writeFileSync(newpath, svgson.stringify(svg));
 }
-process.stdout.cursorTo(25);
-process.stdout.clearLine(1);
-process.stdout.write("Done!\nGenerating font & styles... \n");
+if (process.stdout?.cursorTo) {
+  process.stdout.cursorTo(25);
+  process.stdout.clearLine(1);
+  process.stdout.write("Done!\nGenerating font & styles... \n");
+}
 
 svgtofont({
   src: path.resolve(process.cwd(), "svg"), // svg path
@@ -46,11 +50,10 @@ svgtofont({
   emptyDist: true,
   classNamePrefix: "ginf",
 }).then(() => {
-  process.stdout.write("Tidying unnessary artefacts...");  
+  if (process.stdout?.cursorTo) process.stdout.write("Tidying unnessary artefacts...");
   const toDelete = globSync("styles/*.{styl,scss,less}");
   for (const file of toDelete) {
-    fs.rmSync(file)
+    fs.rmSync(file);
   }
-  process.stdout.write(" Done!\n");
+  if (process.stdout?.cursorTo) process.stdout.write(" Done!\n");
 });
-

@@ -1,7 +1,7 @@
 {
   "id": "game-icons-net-font",
   "title": "game-icons.net Font",  
-  "styles": ["styles/Game-Icons.net.css"],
+  "styles": ["styles/game-icons.net.css"],
   "authors": [
     {
       "name": "Emmanuel Wineberg",
